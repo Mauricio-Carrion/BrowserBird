@@ -122,10 +122,8 @@ class bird {
 class progress {
   constructor() {
     this.element = newElement('span', 'progresso')
-    this.refreshSound = new Audio('../sound/game-notification.wav')
     this.refreshPoints = points => {
       this.element.innerHTML = points
-      this.refreshSound.play()
     }
 
     this.refreshPoints(0)
