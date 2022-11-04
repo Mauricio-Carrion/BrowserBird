@@ -198,7 +198,11 @@ class flappyBird {
         if (colision(Bird, Obstacles)) {
           clearInterval(timer)
 
-          setTimeout(() => { alert('You Lose!!! Press F5 and retry.') }, 800)
+          setTimeout(() => { 
+            if(confirm('You Lose!!! Try Again?')){
+              document.location.reload(true)
+            }
+          }, 800)
         }
 
       }, 20)
